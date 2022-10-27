@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <!-- about-img -->
+                        {{-- <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img">
                                 <img src="assets/img/gallery/about2.png" alt="">
@@ -110,7 +110,8 @@
                             <div class="about-back-img d-none d-lg-block">
                                 <img src="assets/img/gallery/about1.png" alt="">
                             </div>
-                        </div>
+                        </div> --}}
+                        
                     </div>
                 </div>
 

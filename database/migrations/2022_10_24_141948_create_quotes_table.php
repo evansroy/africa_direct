@@ -15,10 +15,17 @@ class CreateQuotesTable extends Migration
     {
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
-            $table->string('massage')->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('contact')->nullable();
+            $table->string('freightype')->nullable();
+            $table->string('cityofdeparture')->nullable();
+            $table->string('incoterm')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('height')->nullable();
+            $table->string('width')->nullable();
+            $table->string('length')->nullable();
+            $table->string('extra_service')->nullable();
             $table->timestamps();
         });
     }

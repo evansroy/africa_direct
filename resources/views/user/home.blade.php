@@ -31,7 +31,7 @@
     @include('user.team')
 
     @include('user.testimony')
-    
+
     @include('user.blog')
 </main>
     @include('user.footer')

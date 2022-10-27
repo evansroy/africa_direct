@@ -72,5 +72,13 @@
           <span class="menu-title">View Contacts</span>
         </a>
       </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('add_team')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-file-document-box"></i>
+          </span>
+          <span class="menu-title">Add Team Member</span>
+        </a>
+      </li>
     </ul>
   </nav>

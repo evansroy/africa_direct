@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 use App\Models\Contacts;
+use App\Models\Team;
 
 class HomeController extends Controller
 {
@@ -17,7 +19,8 @@ class HomeController extends Controller
         {
             if(Auth::user()->usertype=='0')
             {
-                return view('user.home');
+                $team = team::all();
+                return view('user.home',compact('team'));
             }
             else
             {
@@ -32,7 +35,17 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('user.home');
+        if(Auth::id())
+        {
+            return redirect('home');
+        }
+        else
+        {
+                //Fetch all the Team members  from the teams Table
+            $team = team::all();
+            return view ('user.home',compact('team'));
+        }
+
     }
 
     public function about()
@@ -57,14 +70,37 @@ class HomeController extends Controller
 
     public function sendContact(Request $request)
     {
-        $contacts = new contacts;
+          // Form validation
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject'=>'required',
+            'message' => 'required'
+         ]);
+        //  Store data in database
+        Contacts::create($request->all());
 
-        $contacts->name = $request->name;
-        $contacts->massage = $request->message;
-        $contacts->email = $request->email;
-        $contacts->subject = $request->subject;
-
-        $contacts->save();
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
+
+    public function sendQuote(Request $request)
+    {
+        $this->validate( $request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone'=>'required',
+            'freighttype' => 'required',
+            'city' => 'required|email',
+            'inconterms'=>'required',
+            'weight' => 'required',
+            'height' => 'required',
+            'width' => 'required',
+            'length' => 'required'         ]);
+        //  Store data in database
+       quotes::create($request->all());
+
+        //$contacts->save();
+        return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
+    }
+
 }

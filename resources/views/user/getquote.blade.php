@@ -17,7 +17,8 @@
                             </div>
                         </div>
                         <!-- form -->
-                        <form action="#" class="contact-form" >
+                        <form action="{{url('sendQuote')}}" method="post" class="contact-form" enctype="multipart/form-data">
+                            @csrf
                             <div class="row ">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-form">
@@ -52,28 +53,28 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Incoterms">
+                                        <input type="text" placeholder="Incoterms" name="inconterms">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Weight">
+                                        <input type="text" placeholder="Weight" name="weight">
                                     </div>
                                 </div>
                                 <!-- Height Width length -->
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Height">
+                                        <input type="text" placeholder="Height" name="height">
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Width">
+                                        <input type="text" placeholder="Width" name="width">
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="length">
+                                        <input type="text" placeholder="length" name="length">
                                     </div>
                                 </div>
                                 <!-- Radio Button -->

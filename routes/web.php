@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\QuoteController;
+use App\Models\Contacts;
+use App\Models\Team;
+use App\Models\Quote;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +28,17 @@ Route::get('/about', [HomeController::class, 'about']);
 Route::get('/service', [HomeController::class, 'services']);
 Route::get('/contacts', [HomeController::class, 'contact']);
 
-Route::get('/getQuote',[HomeController::class,'quote']);
-
 Route::post('send_contact',[HomeController::class,'sendContact']);
+
 Route::get('recievedContact',[AdminController::class,'contactRecieved']);
+Route::get('add_team',[AdminController::class,'addTeamMember']);
+
+Route::post('team',[AdminController::class,'createStaff']);
+Route::get('staff',[HomeController::class,'viewStaff']);
+
+Route::post('sendQuote',[HomeController::class,'sendQuote']);
+
+
 
 
 Route::middleware([

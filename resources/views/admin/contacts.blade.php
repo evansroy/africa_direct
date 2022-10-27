@@ -5,36 +5,57 @@
     @include('admin.css')
   </head>
   <body>
-    <div class="container-scroller" align="center">
+    <div class="container-scroller">
 
 
-      @include('admin.sidebar')
+        @include('admin.sidebar')
 
-        @include('admin.navbar')
+          @include('admin.navbar')
 
-        {{-- @include('admin.body') --}}
-        <table class="table table-striped table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Message</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Subject</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{-- @foreach ($contacts as $contact)
-                <tr>
-                    <td>{{$contact->massage}}</td>
-                    <td>{{$contact->name}}</td>
-                    <td>{{$contact->email}}</td>
-                    <td>{{$contact->subject}}</td>
-                </tr>
-              @endforeach --}}
+          {{-- @include('admin.body') --}}
+          <div class="main-panel">
+              <div class="content-wrapper">
+                <div class="row ">
+                    <div class="col-12 grid-margin">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Recieved Contacts</h4>
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th> Message</th>
+                                  <th> Name </th>
+                                  <th> Email </th>
+                                  <th> Subject </th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                @foreach ($data as $contact)
+                                    <tr>
+                                        <td> {{$contact->message}}</td>
+                                        <td> {{$contact->name}} </td>
+                                        <td>{{$contact->email}} </td>
+                                        <td> {{$contact->subject}} </td>
+                                        <td>
+                                        <a class="btn btn-primary" href="">View</a>
+                                        <a class="btn btn-success" href="">Reply</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
 
-            </tbody>
-          </table>
-    </div>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
     @include('admin.script')
   </body>
 </html>
