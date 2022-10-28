@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <!-- form -->
-                <form action="{{url('sendQuote')}}" class="contact-form" method="POST" enctype="multipart/form-data">
+                <form action="{{url('send_Quote')}}" class="contact-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row ">
                         <div class="col-lg-6 col-md-6">
@@ -207,7 +207,7 @@
                         </div>
                         <!-- Button -->
                         <div class="col-lg-12">
-                            <button name="submit" class="submit-btn">Request a Quote</button>
+                            <button name="submit" class="submit-btn" type="submit">Request a Quote</button>
                         </div>
                     </div>
                 </form>

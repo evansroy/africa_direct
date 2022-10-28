@@ -101,28 +101,24 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        {{-- <!-- about-img -->
-                        <div class="about-img ">
-                            <div class="about-font-img">
-                                <img src="assets/img/gallery/about2.png" alt="">
-                            </div>
-
-                            <div class="about-back-img d-none d-lg-block">
-                                <img src="assets/img/gallery/about1.png" alt="">
-                            </div>
-                        </div> --}}
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
                         <div class="about-caption mb-50">
                             <!-- Section Tittle -->
                             <div class="section-tittle mb-35">
                                 <span>Our Experience</span>
                                 {{-- <h2>Africa's Best Cargo General Sales Agent</h2> --}}
                             </div>
+                            <p>
+                                Africa Direct Ltd founded with a view to serving the worlds top airlines with a
+                                young dynamic approach to representing the carriers needs for its cargo operation.
+
+                            </p>
+                            <p>
+                                Our staff, from various sectors of airfreight disciplines, have trained with the world’s
+                                 top Airlines and forwarders. Our aim is to provide airlines with a seamless extension of
+                                 their own operation and brand at any given point using our expertise and our network of
+                                 offices to provide cargo coverage wherever you may need it.
+
+                            </p>
                             <p>
                                 We have experience in handling modern cargo flight capacities ranging from short
                                 range, mid-range as well as long range freighters, wide-bodies and various narrow
@@ -132,21 +128,11 @@
                             </p>
                             {{-- <a href="{{url('about')}}" class="btn">More About Us</a> --}}
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <!-- about-img -->
-                        {{-- <div class="about-img ">
-                            <div class="about-font-img">
-                                <img src="assets/img/gallery/about2.png" alt="">
-                            </div>
 
-                            <div class="about-back-img d-none d-lg-block">
-                                <img src="assets/img/gallery/about1.png" alt="">
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
-            </div>
+
+               </div>
         </div>
         <!-- About Area End -->
         @include('user.getquote')
@@ -158,6 +144,10 @@
         <!-- Testimonial End -->
          <!--? Blog Area Start -->
           <!-- Blog Area End -->
+
+          
+        </div>
+
     </main>
 
     <!-- Footer -->

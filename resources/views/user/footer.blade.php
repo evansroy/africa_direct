@@ -23,7 +23,7 @@
                             <div class="footer-tittle">
                                 <h4>COMPANY</h4>
                                 <ul>
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="{{url('about')}}">About Us</a></li>
                                     <li><a href="#">Company</a></li>
                                     <li><a href="#"> Press & Blog</a></li>
                                     <li><a href="#"> Privacy Policy</a></li>
@@ -36,9 +36,9 @@
                             <div class="footer-tittle">
                                 <h4>Open hour</h4>
                                 <ul>
-                                    <li><a href="#">Monday 11am-7pm</a></li>
-                                    <li><a href="#"> Tuesday-Friday 11am-8pm</a></li>
-                                    <li><a href="#"> Saturday 10am-6pm</a></li>
+                                    <li><a href="#">Monday 8am-7pm</a></li>
+                                    <li><a href="#"> Tuesday-Friday 8am-8pm</a></li>
+                                    <li><a href="#"> Saturday 8am-12pm</a></li>
                                     <li><a href="#"> Sunday 11am-6pm</a></li>
                                 </ul>
                             </div>
@@ -66,12 +66,12 @@
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p class="info1">GThe trade war currently ensuing between te US anfd several natxions around thdhe globe, most fiercely with.</p>
+                                    <p class="info1">“We aim to provide the best possible all-service airline representation in the Africa air cargo market."</p>
                                 </div>
                             </div>
                             <!-- Footer Social -->
                             <div class="footer-social ">
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href=""><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fas fa-globe"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -86,7 +86,7 @@
                     <div class="col-lg-12">
                         <div class="footer-copy-right text-center">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Evans Roy</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Evans Roy</a>
   </p>
                         </div>
                     </div>

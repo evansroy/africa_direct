@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Contacts;
 use App\Models\Team;
+use App\Models\Quote;
+
+// use Illuminate\Support\Facades\Mail;
+use Mail;
+
+use App\Mail\ContactMail;
 
 class HomeController extends Controller
 {
@@ -50,7 +56,11 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('user.about_detail');
+       //Fetch all the Team members  from the teams Table
+            $team = team::all();
+            return view ('user.about_detail',compact('team'));
+
+        //return view('user.about_detail');
     }
 
     public function services()
@@ -77,8 +87,32 @@ class HomeController extends Controller
             'subject'=>'required',
             'message' => 'required'
          ]);
+
+        $contact = [
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'subject' => $request['subject'],
+            'message' => $request['message'],
+
+        ];
+
+
         //  Store data in database
         Contacts::create($request->all());
+
+        // \Mail::send('user.contact_email',
+        //      array(
+        //          'name' => $request->get('name'),
+        //          'email'  => $request->get('email'),
+        //          'subject'  => $request->get('subject'),
+        //          'message' => $request->get('message'),
+        //      ), function($message) use ($request)
+        //        {
+        //           $message->from($request->email);
+        //           $message->to('evansroysir@gmail.com');
+        //        });
+
+        Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
@@ -96,11 +130,45 @@ class HomeController extends Controller
             'height' => 'required',
             'width' => 'required',
             'length' => 'required'         ]);
-        //  Store data in database
-       quotes::create($request->all());
 
-        //$contacts->save();
+            $quote = [
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'phone' => $request['phone'],
+                'freightype' => $request['freightype'],
+                'city' => $request['city'],
+                'inconterms' => $request['inconterms'],
+                'weight' => $request['weight'],
+                'height' => $request['height'],
+                'width' => $request['width'],
+                'length' => $request['length'],
+
+            ];
+            //  Store data in database
+            quotes::create($request->all());
+
+            // dd($quote);
+
+            \Mail::send('user.quote_email',
+            array(
+                'name' => $request->get('name'),
+                'email'  => $request->get('email'),
+                'phone'  => $request->get('phone'),
+                'freighttype' => $request->get('freighttype'),
+                'city' => $request->get('city'),
+                'inconterm'  => $request->get('inconterm'),
+                'weight'  => $request->get('weight'),
+                'height' => $request->get('height'),
+                'length'  => $request->get('length'),
+
+            ), function($message) use ($request)
+              {
+                 $message->from($request->email);
+                 $message->to('evansroysir@gmail.com');
+              });
+
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
+
 
 }

@@ -12,12 +12,12 @@
                                 <div class="section-tittle mb-50">
                                     <span>Get a Qote For Free</span>
                                     <h2>Request a Free Quote</h2>
-                                    <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for.</p>
+                                    {{-- <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for.</p> --}}
                                 </div>
                             </div>
                         </div>
                         <!-- form -->
-                        <form action="{{url('sendQuote')}}" method="post" class="contact-form" enctype="multipart/form-data">
+                        <form action="{{url('send_Quote')}}" method="POST" class="contact-form" enctype="multipart/form-data">
                             @csrf
                             <div class="row ">
                                 <div class="col-lg-6 col-md-6">
@@ -103,7 +103,7 @@
                                 </div>
                                 <!-- Button -->
                                 <div class="col-lg-12">
-                                    <button name="submit" class="submit-btn">Request a Quote</button>
+                                    <button name="submit" class="submit-btn" type="submit">Request a Quote</button>
                                 </div>
                             </div>
                         </form>
