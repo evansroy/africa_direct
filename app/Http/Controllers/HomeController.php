@@ -112,7 +112,7 @@ class HomeController extends Controller
         //           $message->to('evansroysir@gmail.com');
         //        });
 
-        Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
+        Mail::to('africadirect@shop2shop.co.ke')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
@@ -164,7 +164,7 @@ class HomeController extends Controller
             ), function($message) use ($request)
               {
                  $message->from($request->email);
-                 $message->to('evansroysir@gmail.com');
+                 $message->to('africadirect@shop2shop.co.ke');
               });
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');

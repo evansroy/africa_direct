@@ -41,6 +41,7 @@
                                         <td>
                                         <a class="btn btn-primary" href="">View</a>
                                         <a class="btn btn-success" href="">Reply</a>
+                                        <a class="btn btn-danger" href="{{url('delete_contact',$contact->id)}}" onclick="return confirm('Are you sure you want to Delete This Doctor ?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach

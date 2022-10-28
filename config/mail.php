@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
-            'port' => env('MAIL_PORT', 465),
-            'encryption' => env('MAIL_ENCRYPTION', ''),
-            'username' => env('evansroyair@gmail.com'),
-            'password' => env('wajxtcslolkdyjmu'),
+            'host' => env('MAIL_HOST', 'host09.safaricombusiness.co.ke'),
+            'port' => env('MAIL_PORT', 995),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+            'username' => env('africadirect@shop2shop.co.ke'),
+            'password' => env('0##YK_YXXSHM'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'evansroysir@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Evans Roy'),
+        'address' => env('MAIL_FROM_ADDRESS', 'africadirect@shop2shop.co.ke'),
+        'name' => env('MAIL_FROM_NAME', 'Africa Direct'),
     ],
 
     /*

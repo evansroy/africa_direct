@@ -40,6 +40,8 @@ Route::post('send_Quote',[HomeController::class,'sendQuote']);
 
 Route::get('cargoservice',[HomeController::class,'cargoService']);
 
+Route::get('delete_contact',[AdminController::class,'delete']);
+
 
 
 

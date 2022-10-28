@@ -12,7 +12,7 @@
 
         @include('admin.navbar')
 
-        @include('admin.body')
+        {{-- @include('admin.body') --}}
     </div>
     @include('admin.script')
   </body>
