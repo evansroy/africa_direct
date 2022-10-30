@@ -22,22 +22,22 @@
                             <div class="row ">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Name" name="name">
+                                        <input type="text" placeholder="Name" name="name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Email" name="email">
+                                        <input type="text" placeholder="Email" name="email" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Contact Number" name="phone">
+                                        <input type="text" placeholder="Contact Number" name="phone" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="select-items">
-                                        <select id="select1" name="freighttype" class="input-form">
+                                        <select id="select1" name="freighttype" class="input-form" required>
                                             <option value="Freight Type">Freight Type</option>
                                             <option value="Catagories One">Catagories One</option>
                                             <option value="Catagories Two">Catagories Two</option>
@@ -48,33 +48,33 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="City of Departure" name="city">
+                                        <input type="text" placeholder="City of Departure" name="city" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Incoterms" name="inconterms">
+                                        <input type="text" placeholder="Incoterms" name="inconterms" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Weight" name="weight">
+                                        <input type="text" placeholder="Weight" name="weight" required>
                                     </div>
                                 </div>
                                 <!-- Height Width length -->
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Height" name="height">
+                                        <input type="text" placeholder="Height" name="height" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Width" name="width">
+                                        <input type="text" placeholder="Width" name="width" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="length" name="length">
+                                        <input type="text" placeholder="length" name="length" required>
                                     </div>
                                 </div>
                                 <!-- Radio Button -->
@@ -83,11 +83,11 @@
                                         <label>Extra services:</label>
                                         <div class="select-radio">
                                             <div class="radio">
-                                                <input id="radio-1" name="radio" type="radio" checked="">
+                                                <input id="radio-1" name="radio" type="radio" checked="" >
                                                 <label for="radio-1" class="radio-label">Freight</label>
                                             </div>
                                             <div class="radio">
-                                                <input id="radio-2" name="radio" type="radio">
+                                                <input id="radio-2" name="radio" type="radio" >
                                                 <label for="radio-2" class="radio-label">Express Delivery</label>
                                             </div>
                                             <div class="radio">

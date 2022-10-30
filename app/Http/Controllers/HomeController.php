@@ -12,6 +12,7 @@ use App\Models\Team;
 use App\Models\Quote;
 
 
+
 use App\Mail\ContactMail;
 
 class HomeController extends Controller
@@ -80,11 +81,13 @@ class HomeController extends Controller
     {
           // Form validation
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'subject'=>'required',
-            'message' => 'required'
+            'name' => '',
+            'email' => 'email',
+            'subject'=>'',
+            'message' => ''
          ]);
+
+         $request = $request->all();
 
         $contact = [
             'name' => $request['name'],
@@ -94,9 +97,10 @@ class HomeController extends Controller
 
         ];
 
+        // dd($contact);
 
         //  Store data in database
-        Contacts::create($request->all());
+        Contacts::create($contact);
 
         // \Mail::send('user.contact_email',
         //      array(
@@ -121,10 +125,10 @@ class HomeController extends Controller
         $this->validate($request, [
             'name' => '',
             'email' => 'email',
-            'phone'=>'',
-            'freighttype' => '',
-            'city' => '',
-            'inconterms'=>'',
+            'contact'=>'',
+            'freightype' => '',
+            'cityofdeparture' => '',
+            'incoterm'=>'',
             'weight' => '',
             'height' => '',
             'width' => '',

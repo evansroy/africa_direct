@@ -13,7 +13,6 @@ class Quote extends Model
         'name',
         'email',
         'phone',
-        'password',
         'freighttype',
         'city',
         'inconterms',
