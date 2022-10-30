@@ -37,12 +37,12 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="select-items">
-                                        <select name="select" id="select1" name="freighttype">
-                                            <option value="">Freight Type</option>
-                                            <option value="">Catagories One</option>
-                                            <option value="">Catagories Two</option>
-                                            <option value="">Catagories Three</option>
-                                            <option value="">Catagories Four</option>
+                                        <select id="select1" name="freighttype" class="input-form">
+                                            <option value="Freight Type">Freight Type</option>
+                                            <option value="Catagories One">Catagories One</option>
+                                            <option value="Catagories Two">Catagories Two</option>
+                                            <option value="Catagories Three">Catagories Three</option>
+                                            <option value="Catagories Four">Catagories Four</option>
                                         </select>
                                     </div>
                                 </div>

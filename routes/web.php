@@ -36,7 +36,7 @@ Route::get('add_team',[AdminController::class,'addTeamMember']);
 Route::post('team',[AdminController::class,'createStaff']);
 Route::get('staff',[HomeController::class,'viewStaff']);
 
-Route::post('send_Quote',[HomeController::class,'sendQuote']);
+Route::post('send_Quote',[HomeController::class,'sendQuote'])->name('send_Quote');
 
 Route::get('cargoservice',[HomeController::class,'cargoService']);
 

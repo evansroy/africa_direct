@@ -1,4 +1,3 @@
-
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -27,12 +26,11 @@
             </div>
 
             @if (session()->has('message'))
-
                 <div class="alert alert-success">
                     <button class="close" type="button" data-dismiss="alert">
                         X
                     </button>
-                    {{session()->get('message')}}
+                    {{ session()->get('message') }}
                 </div>
             @endif
 
@@ -51,31 +49,30 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="{{url('/')}}">Home</a></li>
-                                            <li><a href="{{url('/about')}}">About</a></li>
-                                            <li><a href="{{url('/service')}}">Services</a></li>
-                                            <li><a href="{{url('')}}">Blog</a>
+                                            <li><a href="{{ url('/') }}">Home</a></li>
+                                            <li><a href="{{ url('/about') }}">About</a></li>
+                                            <li><a href="{{ url('/service') }}">Services</a></li>
+                                            <li><a href="{{ url('') }}">Blog</a>
                                                 {{-- <ul class="submenu">
                                                     <li><a href="blog.html">Blog</a></li>
                                                     <li><a href="blog_details.html">Blog Details</a></li>
                                                     <li><a href="elements.html">Element</a></li>
                                                 </ul> --}}
                                             </li>
-                                            <li><a href="{{url('/contacts')}}">Contact</a></li>
+                                            <li><a href="{{ url('/contacts') }}">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 @if (Route::has('login'))
                                     @auth
 
-                                    <x-app-layout>
+                                        <x-app-layout>
 
-                                    </x-app-layout>
-
-                                @else
-                                    <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="{{route('login')}}" class="btn header-btn">Log In</a>
-                                    </div>
+                                        </x-app-layout>
+                                    @else
+                                        <div class="header-right-btn d-none d-lg-block ml-20">
+                                            <a href="{{ route('login') }}" class="btn header-btn">Log In</a>
+                                        </div>
 
                                     @endauth
                                 @endif
@@ -83,7 +80,9 @@
 
 
                                 <div class="header-right-btn d-none d-lg-block ml-20">
-                                    <a class="btn header-btn" id="quoteForm" data-toggle="modal" data-target='#qouteFormId' data-id="quoteFormId" data-placement="top" data-original-title="">Get A Qoue</a>
+                                    <a class="btn header-btn" id="quoteForm" data-toggle="modal"
+                                        data-target='#qouteFormId' data-id="quoteFormId" data-placement="top"
+                                        data-original-title="">Get A Qoue</a>
 
                                 </div>
                             </div>
@@ -103,118 +102,123 @@
 
 
     <!-- Modal -->
-<div id="qouteFormId" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg">
+    <div id="qouteFormId" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
 
-      <!-- Modal content-->
-      <div class="modal-content" >
+            <!-- Modal content-->
+            <div class="modal-content">
 
 
-            <!-- From tittle -->
-            <div class="row" style="padding: 50px">
-                <div class="col-lg-12">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle mb-50">
-                        <span>Get a Qote For Free</span>
-                        <h2>Request a Free Quote</h2>
-                        <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for.</p>
+                <!-- From tittle -->
+                <div class="row" style="padding: 50px">
+                    <div class="col-lg-12">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-50">
+                            <span>Get a Qote For Free</span>
+                            <h2>Request a Free Quote</h2>
+                            <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select
+                                your favorite layouts & elements for.</p>
+                        </div>
                     </div>
-                </div>
-                <!-- form -->
-                <form action="{{url('send_Quote')}}" class="contact-form" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="row ">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <input type="text" placeholder="Name" name="name" class="form-control">
+                    <!-- form -->
+                    <form action="{{ route('send_Quote') }}" class="contact-form" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
+                        <div class="row ">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Name" name="name" class="form-control"
+                                        required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="input-form">
-                                <input type="text" placeholder="Email" name="email"class="form-control">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="input-form">
+                                    <input type="text" placeholder="Email" name="email"class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <input type="text" placeholder="Contact Number" name="phone"class="form-control">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Contact Number"
+                                        name="phone"class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <select name="select" id="select1" name="freighttype" class="form-control">
-                                    <option value="">Freight Type</option>
-                                    <option value="">Catagories One</option>
-                                    <option value="">Catagories Two</option>
-                                    <option value="">Catagories Three</option>
-                                    <option value="">Catagories Four</option>
-                                </select>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <select  id="select1" name="freighttype" class="form-control">
+                                        <option value="Freight Type">Freight Type</option>
+                                        <option value="Catagories One">Catagories One</option>
+                                        <option value="Catagories Two">Catagories Two</option>
+                                        <option value="Catagories Three">Catagories Three</option>
+                                        <option value="Catagories Four">Catagories Four</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <input type="text" placeholder="City of Departure" name="city"class="form-control">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="City of Departure"
+                                        name="city"class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <input type="text" placeholder="Incoterms" class="form-control">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text"  name="inconterms" placeholder="Incoterms" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <input type="text" placeholder="Weight" class="form-control">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text"  name="weight" placeholder="Weight" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <!-- Height Width length -->
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <input type="text" placeholder="Height"class="form-control">
+                            <!-- Height Width length -->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text"  name="height" placeholder="Height" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="input-form">
-                                <input type="text" placeholder="Width" class="form-control">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="input-form">
+                                    <input type="text"  name="width" placeholder="Width" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="input-form">
-                                <input type="text" placeholder="length" class="form-control">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="input-form">
+                                    <input type="text"  name="length" placeholder="length" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <!-- Radio Button -->
-                        <div class="col-lg-12">
-                            <div class="radio-wrapper mb-30 mt-15">
-                                <label>Extra services:</label>
-                                <div class="select-radio">
-                                    <div class="radio">
-                                        <input id="radio-1" name="radio" type="radio" checked="">
-                                        <label for="radio-1" class="radio-label">Freight</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input id="radio-2" name="radio" type="radio">
-                                        <label for="radio-2" class="radio-label">Express Delivery</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input id="radio-4" name="radio" type="radio">
-                                        <label for="radio-4" class="radio-label">Insurance</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input id="radio-5" name="radio" type="radio">
-                                        <label for="radio-5" class="radio-label">Packaging</label>
+                            <!-- Radio Button -->
+                            <div class="col-lg-12">
+                                <div class="radio-wrapper mb-30 mt-15">
+                                    <label>Extra services:</label>
+                                    <div class="select-radio">
+                                        <div class="radio">
+                                            <input id="radio-1" name="radio" type="radio" checked="">
+                                            <label for="radio-1" class="radio-label">Freight</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="radio-2" name="radio" type="radio">
+                                            <label for="radio-2" class="radio-label">Express Delivery</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="radio-4" name="radio" type="radio">
+                                            <label for="radio-4" class="radio-label">Insurance</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="radio-5" name="radio" type="radio">
+                                            <label for="radio-5" class="radio-label">Packaging</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Button -->
+                            <div class="col-lg-12">
+                                <button name="submit" class="submit-btn" type="submit">Request a Quote</button>
+                            </div>
                         </div>
-                        <!-- Button -->
-                        <div class="col-lg-12">
-                            <button name="submit" class="submit-btn" type="submit">Request a Quote</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-      </div>
 
+        </div>
     </div>
-</div>
 
 </header>

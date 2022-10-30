@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'host09.safaricombusiness.co.ke'),
-            'port' => env('MAIL_PORT', 995),
-            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
-            'username' => env('africadirect@shop2shop.co.ke'),
-            'password' => env('0##YK_YXXSHM'),
+            'host' => env('MAIL_HOST', ''),
+            'port' => env('MAIL_PORT', 456),
+            'encryption' => env('MAIL_ENCRYPTION', ''),
+            'username' => env('mail_username',''),
+            'password' => env('MAIL_PASSWORD',''),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'africadirect@shop2shop.co.ke'),
-        'name' => env('MAIL_FROM_NAME', 'Africa Direct'),
+        'address' => env('MAIL_FROM_ADDRESS', ''),
+        'name' => env('MAIL_FROM_NAME', ''),
     ],
 
     /*

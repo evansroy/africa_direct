@@ -11,8 +11,6 @@ use App\Models\Contacts;
 use App\Models\Team;
 use App\Models\Quote;
 
-// use Illuminate\Support\Facades\Mail;
-use Mail;
 
 use App\Mail\ContactMail;
 
@@ -112,62 +110,56 @@ class HomeController extends Controller
         //           $message->to('evansroysir@gmail.com');
         //        });
 
-        Mail::to('africadirect@shop2shop.co.ke')->send(new ContactMail($contact));
+        \Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
 
     public function sendQuote(Request $request)
     {
-        $this->validate( $request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone'=>'required',
-            'freighttype' => 'required',
-            'city' => 'required|email',
-            'inconterms'=>'required',
-            'weight' => 'required',
-            'height' => 'required',
-            'width' => 'required',
-            'length' => 'required'         ]);
+
+        $this->validate($request, [
+            'name' => '',
+            'email' => 'email',
+            'phone'=>'',
+            'freighttype' => '',
+            'city' => '',
+            'inconterms'=>'',
+            'weight' => '',
+            'height' => '',
+            'width' => '',
+            'length' => ''
+        ]);
+
+        $request = $request->all();
+
 
             $quote = [
                 'name' => $request['name'],
                 'email' => $request['email'],
-                'phone' => $request['phone'],
-                'freightype' => $request['freightype'],
-                'city' => $request['city'],
-                'inconterms' => $request['inconterms'],
+                'contact' => $request['phone'],
+                'freightype' => $request['freighttype'],
+                'cityofdeparture' => $request['city'],
+                'incoterm' => $request['inconterms'],
                 'weight' => $request['weight'],
                 'height' => $request['height'],
                 'width' => $request['width'],
                 'length' => $request['length'],
 
             ];
+            //dd($quote);
             //  Store data in database
-            quotes::create($request->all());
+             Quote::create($quote);
 
             // dd($quote);
 
-            \Mail::send('user.quote_email',
-            array(
-                'name' => $request->get('name'),
-                'email'  => $request->get('email'),
-                'phone'  => $request->get('phone'),
-                'freighttype' => $request->get('freighttype'),
-                'city' => $request->get('city'),
-                'inconterm'  => $request->get('inconterm'),
-                'weight'  => $request->get('weight'),
-                'height' => $request->get('height'),
-                'length'  => $request->get('length'),
-
-            ), function($message) use ($request)
+            \Mail::send('user.quote_email', $quote, function($message) use ($request)
               {
-                 $message->from($request->email);
-                 $message->to('africadirect@shop2shop.co.ke');
+                //  $message->from($request->email);
+                 $message->to('evansroysir@gmail.com');
               });
 
-        return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
+        return redirect()->back()->with('message','Your Qoute Request has been Recieved!, Getting Back to You Soon');
     }
 
 
