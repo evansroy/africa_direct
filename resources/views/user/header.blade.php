@@ -191,19 +191,19 @@
                                     <label>Extra services:</label>
                                     <div class="select-radio">
                                         <div class="radio">
-                                            <input id="radio-1" name="radio" type="radio" checked="">
+                                            <input id="radio-1" name="radio" type="radio" checked="" value="Freight">
                                             <label for="radio-1" class="radio-label">Freight</label>
                                         </div>
                                         <div class="radio">
-                                            <input id="radio-2" name="radio" type="radio">
+                                            <input id="radio-2" name="radio" type="radio" value="Express Delivery">
                                             <label for="radio-2" class="radio-label">Express Delivery</label>
                                         </div>
                                         <div class="radio">
-                                            <input id="radio-4" name="radio" type="radio">
+                                            <input id="radio-4" name="radio" type="radio" value="Insurance">
                                             <label for="radio-4" class="radio-label">Insurance</label>
                                         </div>
                                         <div class="radio">
-                                            <input id="radio-5" name="radio" type="radio">
+                                            <input id="radio-5" name="radio" type="radio" value="Packaging">
                                             <label for="radio-5" class="radio-label">Packaging</label>
                                         </div>
                                     </div>

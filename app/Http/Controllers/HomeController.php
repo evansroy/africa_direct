@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+
 use App\Models\User;
 use App\Models\Contacts;
 use App\Models\Team;
@@ -14,6 +15,7 @@ use App\Models\Quote;
 
 
 use App\Mail\ContactMail;
+use App\Mail\QuoteMail;
 
 class HomeController extends Controller
 {
@@ -102,18 +104,7 @@ class HomeController extends Controller
         //  Store data in database
         Contacts::create($contact);
 
-        // \Mail::send('user.contact_email',
-        //      array(
-        //          'name' => $request->get('name'),
-        //          'email'  => $request->get('email'),
-        //          'subject'  => $request->get('subject'),
-        //          'message' => $request->get('message'),
-        //      ), function($message) use ($request)
-        //        {
-        //           $message->from($request->email);
-        //           $message->to('evansroysir@gmail.com');
-        //        });
-
+        
         \Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
@@ -157,11 +148,14 @@ class HomeController extends Controller
 
             // dd($quote);
 
-            \Mail::send('user.quote_email', $quote, function($message) use ($request)
-              {
-                //  $message->from($request->email);
-                 $message->to('evansroysir@gmail.com');
-              });
+            // \Mail::send('user.quote_email', $quote, function($message) use ($request)
+            //   {
+            //     //  $message->from($request->email);
+            //      $message->to('evansroysir@gmail.com');
+            //   });
+
+            \Mail::to('evansroysir@gmail.com')->send(new QuoteMail($quote));
+
 
         return redirect()->back()->with('message','Your Qoute Request has been Recieved!, Getting Back to You Soon');
     }
