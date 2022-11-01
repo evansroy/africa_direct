@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Quote;
 
+use Illuminate\Support\Facades\Auth;
+
 
 use App\Mail\QuoteMail;
 
@@ -58,7 +60,9 @@ class QuoteController extends Controller
 
     public function viewQuote()
     {
-        return view('admin.view_quote');
+        $data = Quote::all();
+
+        return view('admin.view_quote',compact('data'));
     }
 
 }

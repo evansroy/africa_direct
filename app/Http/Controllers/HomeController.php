@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Contacts;
 use App\Models\Team;
-use App\Models\Quote;
+
 
 
 
 use App\Mail\ContactMail;
-use App\Mail\QuoteMail;
+
 
 class HomeController extends Controller
 {
@@ -110,6 +110,6 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
 
-   
+
 
 }
