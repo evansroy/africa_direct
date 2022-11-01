@@ -56,4 +56,9 @@ class QuoteController extends Controller
         return redirect()->back()->with('message','Your Qoute Request has been Recieved!, Getting Back to You Soon');
     }
 
+    public function viewQuote()
+    {
+        return view('admin.view_quote');
+    }
+
 }
