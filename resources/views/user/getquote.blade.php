@@ -27,17 +27,17 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Email" name="email" required>
+                                        <input type="email" placeholder="Email" name="email" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Contact Number" name="phone" required>
+                                        <input type="number" placeholder="Contact Number" name="contact" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="select-items">
-                                        <select id="select1" name="freighttype" class="input-form" required>
+                                        <select id="select1" name="freightype" class="input-form" required>
                                             <option value="Freight Type">Freight Type</option>
                                             <option value="Catagories One">Catagories One</option>
                                             <option value="Catagories Two">Catagories Two</option>
@@ -48,59 +48,37 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="City of Departure" name="city" required>
+                                        <input type="text" placeholder="City of Departure" name="cityofdeparture" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Incoterms" name="inconterms" required>
+                                        <input type="text" placeholder="Incoterms" name="incoterm" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Weight" name="weight" required>
+                                        <input type="number" placeholder="Weight" name="weight" required>
                                     </div>
                                 </div>
                                 <!-- Height Width length -->
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Height" name="height" required>
+                                        <input type="number" placeholder="Height" name="height" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Width" name="width" required>
+                                        <input type="number" placeholder="Width" name="width" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="input-form">
-                                        <input type="text" placeholder="length" name="length" required>
+                                        <input type="number" placeholder="length" name="length" required>
                                     </div>
                                 </div>
                                 <!-- Radio Button -->
-                                <div class="col-lg-12">
-                                    <div class="radio-wrapper mb-30 mt-15">
-                                        <label>Extra services:</label>
-                                        <div class="select-radio">
-                                            <div class="radio">
-                                                <input id="radio-1" name="radio" type="radio" checked="" >
-                                                <label for="radio-1" class="radio-label">Freight</label>
-                                            </div>
-                                            <div class="radio">
-                                                <input id="radio-2" name="radio" type="radio" >
-                                                <label for="radio-2" class="radio-label">Express Delivery</label>
-                                            </div>
-                                            <div class="radio">
-                                                <input id="radio-4" name="radio" type="radio">
-                                                <label for="radio-4" class="radio-label">Insurance</label>
-                                            </div>
-                                            <div class="radio">
-                                                <input id="radio-5" name="radio" type="radio">
-                                                <label for="radio-5" class="radio-label">Packaging</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <!-- Button -->
                                 <div class="col-lg-12">
                                     <button name="submit" class="submit-btn" type="submit">Request a Quote</button>

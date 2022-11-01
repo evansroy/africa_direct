@@ -9,13 +9,15 @@ class Quote extends Model
 {
     use HasFactory;
 
+
+
     protected $fillable = [
         'name',
         'email',
-        'phone',
-        'freighttype',
-        'city',
-        'inconterms',
+        'contact',
+        'freightype',
+        'cityofdeparture',
+        'incoterm',
         'weight',
         'height',
         'width',

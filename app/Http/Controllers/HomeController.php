@@ -104,61 +104,12 @@ class HomeController extends Controller
         //  Store data in database
         Contacts::create($contact);
 
-        
-        \Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
+
+        \Mail::to('info@africadirect.net')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
 
-    public function sendQuote(Request $request)
-    {
-
-        $this->validate($request, [
-            'name' => '',
-            'email' => 'email',
-            'contact'=>'',
-            'freightype' => '',
-            'cityofdeparture' => '',
-            'incoterm'=>'',
-            'weight' => '',
-            'height' => '',
-            'width' => '',
-            'length' => ''
-        ]);
-
-        $request = $request->all();
-
-
-            $quote = [
-                'name' => $request['name'],
-                'email' => $request['email'],
-                'contact' => $request['phone'],
-                'freightype' => $request['freighttype'],
-                'cityofdeparture' => $request['city'],
-                'incoterm' => $request['inconterms'],
-                'weight' => $request['weight'],
-                'height' => $request['height'],
-                'width' => $request['width'],
-                'length' => $request['length'],
-
-            ];
-            //dd($quote);
-            //  Store data in database
-             Quote::create($quote);
-
-            // dd($quote);
-
-            // \Mail::send('user.quote_email', $quote, function($message) use ($request)
-            //   {
-            //     //  $message->from($request->email);
-            //      $message->to('evansroysir@gmail.com');
-            //   });
-
-            \Mail::to('evansroysir@gmail.com')->send(new QuoteMail($quote));
-
-
-        return redirect()->back()->with('message','Your Qoute Request has been Recieved!, Getting Back to You Soon');
-    }
-
+   
 
 }

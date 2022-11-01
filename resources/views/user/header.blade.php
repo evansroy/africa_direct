@@ -116,8 +116,7 @@
                         <div class="section-tittle mb-50">
                             <span>Get a Qote For Free</span>
                             <h2>Request a Free Quote</h2>
-                            <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select
-                                your favorite layouts & elements for.</p>
+
                         </div>
                     </div>
                     <!-- form -->
@@ -133,18 +132,18 @@
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="input-form">
-                                    <input type="text" placeholder="Email" name="email"class="form-control">
+                                    <input type="email" placeholder="Email" name="email"class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Contact Number"
-                                        name="phone"class="form-control">
+                                    <input type="number" placeholder="Contact Number"
+                                        name="contact"class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <select  id="select1" name="freighttype" class="form-control">
+                                    <select  id="select1" name="freightype" class="form-control">
                                         <option value="Freight Type">Freight Type</option>
                                         <option value="Catagories One">Catagories One</option>
                                         <option value="Catagories Two">Catagories Two</option>
@@ -156,12 +155,12 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <input type="text" placeholder="City of Departure"
-                                        name="city"class="form-control">
+                                        name="cityofdeparture"class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text"  name="inconterms" placeholder="Incoterms" class="form-control">
+                                    <input type="text"  name="incoterm" placeholder="Incoterms" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -186,29 +185,7 @@
                                 </div>
                             </div>
                             <!-- Radio Button -->
-                            <div class="col-lg-12">
-                                <div class="radio-wrapper mb-30 mt-15">
-                                    <label>Extra services:</label>
-                                    <div class="select-radio">
-                                        <div class="radio">
-                                            <input id="radio-1" name="radio" type="radio" checked="" value="Freight">
-                                            <label for="radio-1" class="radio-label">Freight</label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="radio-2" name="radio" type="radio" value="Express Delivery">
-                                            <label for="radio-2" class="radio-label">Express Delivery</label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="radio-4" name="radio" type="radio" value="Insurance">
-                                            <label for="radio-4" class="radio-label">Insurance</label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="radio-5" name="radio" type="radio" value="Packaging">
-                                            <label for="radio-5" class="radio-label">Packaging</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <!-- Button -->
                             <div class="col-lg-12">
                                 <button name="submit" class="submit-btn" type="submit">Request a Quote</button>

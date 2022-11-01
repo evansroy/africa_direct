@@ -7,7 +7,7 @@
                     <!-- Section Tittle -->
                     <div class="section-tittle text-center mb-70">
                         <span>Our Team Mambers</span>
-                        <h2>What We Can Do For You</h2>
+                        <h2>The Following are our staff members who will be serving you</h2>
                     </div>
                 </div>
             </div>
