@@ -62,7 +62,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="assets/img/logo/adl_logo-bg.png" alt=""></a>
+                                <a href="{{url('/')}}"><img src="assets/img/logo/adl_logo-bg.png" alt=""></a>
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
