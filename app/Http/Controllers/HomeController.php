@@ -15,7 +15,7 @@ use App\Models\Team;
 
 
 use App\Mail\ContactMail;
-
+use App\Models\Partners;
 
 class HomeController extends Controller
 {
@@ -105,11 +105,18 @@ class HomeController extends Controller
         Contacts::create($contact);
 
 
-        \Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
+        \Mail::to('info@africadirect.net')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
 
+    public function viewpartner()
+    {
+        $partner = Partners::all();
 
+        return view ('user.blog',compact('parnter'));
+
+
+    }
 
 }

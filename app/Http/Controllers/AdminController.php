@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\Models\Contacts;
+use App\Models\Partners;
 use App\Models\Team;
 
 
@@ -84,6 +85,31 @@ class AdminController extends Controller
         $data->delete();
 
         return redirect()->back();
+    }
+
+    public function partner()
+    {
+        return view('admin.partners');
+    }
+
+    public function addPartner(Request $request)
+    {
+        $partner = new Partners();
+
+        $image = $request->file;
+
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+
+        $request->file->move('parnerslogo',$imagename);
+        $partner->logo=$imagename;
+
+        $partner->name=$request->name;
+        $partner->contacts=$request->contacts;
+        $partner->email=$request->email;
+
+        $partner->save();
+
+        return redirect()->back()->with('message','Partner Successfully Added!');
     }
 
 }

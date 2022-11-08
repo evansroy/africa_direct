@@ -5,9 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\QuoteController;
-use App\Models\Contacts;
-use App\Models\Team;
-use App\Models\Quote;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +42,11 @@ Route::get('cargoservice',[HomeController::class,'cargoService']);
 Route::delete('delete_contact{id}',[AdminController::class,'delete']);
 
 Route::get('recievedQuote',[QuoteController::class,'viewQuote'])->name('recievedQuote');
+
+Route::get('partner',[AdminController::class,'partner'])->name('viewPartners');
+Route::post('post',[AdminController::class,'addPartner'])->name('addPartner');
+
+Route::get('/viewPartner',[HomeController::class,'viewpartner']);
 
 
 
