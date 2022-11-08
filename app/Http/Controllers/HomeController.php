@@ -27,11 +27,11 @@ class HomeController extends Controller
             if(Auth::user()->usertype=='0')
             {
                 $team = team::all();
-                return view('user.home',compact('team'));
+                return view('user.index',compact('team'));
             }
             else
             {
-                return view('admin.home');
+                return view('admin.index');
             }
         }
         else
@@ -44,13 +44,13 @@ class HomeController extends Controller
     {
         if(Auth::id())
         {
-            return redirect('home');
+            return redirect('index');
         }
         else
         {
                 //Fetch all the Team members  from the teams Table
             $team = team::all();
-            return view ('user.home',compact('team'));
+            return view ('user.index',compact('team'));
         }
 
     }
@@ -110,13 +110,6 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
 
-    public function viewpartner()
-    {
-        $partner = Partners::all();
 
-        return view ('user.blog',compact('parnter'));
-
-
-    }
 
 }

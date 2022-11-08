@@ -18,11 +18,11 @@ class AdminController extends Controller
             if(Auth::user()->usertype=='1')
             {
                 $team = team::all();
-                return view('admin.home',compact('team'));
+                return view('admin.index',compact('team'));
             }
             else
             {
-                return view('user.home');
+                return view('user.index');
             }
         }
         else
@@ -35,13 +35,13 @@ class AdminController extends Controller
     {
         if(Auth::id())
         {
-            return redirect('home');
+            return redirect('index');
         }
         else
         {
                 //Fetch all the Team members  from the teams Table
             $team = team::all();
-            return view ('admin.home',compact('team'));
+            return view ('admin.index',compact('team'));
         }
 
     }
