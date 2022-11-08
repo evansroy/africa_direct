@@ -105,7 +105,7 @@ class HomeController extends Controller
         Contacts::create($contact);
 
 
-        \Mail::to('info@africadirect.net')->send(new ContactMail($contact));
+        \Mail::to('evansroysir@gmail.com')->send(new ContactMail($contact));
 
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }

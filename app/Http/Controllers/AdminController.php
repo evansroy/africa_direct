@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-// namespace App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\Models\Contacts;

@@ -52,9 +52,9 @@ class QuoteController extends Controller
 
 
 
-            \Mail::to('info@africadirect.net')->send(new QuoteMail($request));
+            \Mail::to('evansroysir@gmail.com')->send(new QuoteMail($request));
 
-
+            // info@africadirect.net
         return redirect()->back()->with('message','Your Qoute Request has been Recieved!, Getting Back to You Soon');
     }
 
