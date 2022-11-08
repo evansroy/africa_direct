@@ -15,7 +15,7 @@ use App\Models\Team;
 
 
 use App\Mail\ContactMail;
-
+use App\Models\Partners;
 
 class HomeController extends Controller
 {
@@ -110,6 +110,13 @@ class HomeController extends Controller
         return redirect()->back()->with('message','Message Sent Successfully!, Getting Back to You Soon');
     }
 
+    public function viewpartner()
+    {
+        $partner = Partners::all();
 
+        return view ('user.blog',compact('parnter'));
+
+
+    }
 
 }

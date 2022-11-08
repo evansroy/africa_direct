@@ -88,5 +88,14 @@
           <span class="menu-title">Received Quote</span>
         </a>
       </li>
+
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{route('viewPartners')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-file-document-box"></i>
+          </span>
+          <span class="menu-title">Add Partners</span>
+        </a>
+      </li>
     </ul>
   </nav>
