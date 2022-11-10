@@ -20,7 +20,7 @@ use App\Http\Controllers\QuoteController;
 */
 
 
-Route::get('/index',[HomeController::class,'redirect']);
+Route::get('/index',[HomeController::class,'redirect'])->middleware('auth','verified');
 Route::get('/',[HomeController::class,'index']);
 Route::get('/about', [HomeController::class, 'about']);
 
